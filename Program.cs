@@ -63,3 +63,52 @@ foreach (var rat in newFavoriteRats)
 
 //DELETE
 //gimme - probably doesn't exist, but if it does TELL ME
+
+//For & ForEach
+//OLD SCHOOL WAY forloop
+//a for loop is very similar to a conveyer belt in a factory; the data is on a conveyer belt that moves them along, iterating them, one after the other. And when the data is on the conveyer belt, we can "operate" on them like a robotic arm can work on things on a conveyer belt while the belt is moving
+//var i = 0 ; initialise a variable, tell it where we should start
+//i < 10 ; control where the conveyer belt stops, how long the conveyer belt should run for --> we don't want it to iterate more than ten so therefore we tell it to stop at ten
+//i++ ; incrementer, control how you go to the next item in the for loop
+for (var i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+}
+//NEW SCHOOL WAY aka foreach
+//whenever the right side is plural, it represents a collection aka more than one, "students" --> where you are going to put your array
+//left side is always one, in this case "student", as it is what you use to write out in console.writeline
+//else it is like the for loop except you don't have to worry about iteration aka where the things are in the array, you can just write them out directly
+//foreach (var student in students)
+//{
+//    Console.WriteLine(student);
+//}
+
+//NEW NEW SCHOOL aka LINQ
+//students.ToList().ForEach(i => Console.WriteLine(i));
+//Array.ForEach(students, element => Console.WriteLine(element));
+
+//Counter
+for (var i = 1; i <= 10; i++) //initilizing a 1 in place of a 0 which we did above means that we start the counting at 1 instead of 0. 
+{
+    Console.WriteLine(i);
+}
+
+string[] favoriteHairMetalBands = ["Van Halen", "Dokken", "Great White"];
+for (var i = 0; i < favoriteHairMetalBands.Length; i++) //setting a .length means that c# calculates the length of the array for us and runs through to the end, so we don't have to state with numbers how long it's going to run for
+{
+    Console.WriteLine(favoriteHairMetalBands[i]); //we need to put [i] in the console.writeline so that C# can actually get access and run through the array instead of stating that it is part of an array; System.String[]
+}
+
+//Do the same thing as above, but easier
+foreach (var band in favoriteHairMetalBands)
+{
+    Console.WriteLine(band);
+}
+
+//Do it again even easier!! :O
+favoriteHairMetalBands.ToList().ForEach((i) =>
+{
+    Console.WriteLine("ForEach: " + i);
+});
+
+Array.ForEach(favoriteHairMetalBands, e => Console.WriteLine("Array.ForEach: " + e));
