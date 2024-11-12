@@ -112,3 +112,38 @@ favoriteHairMetalBands.ToList().ForEach((i) =>
 });
 
 Array.ForEach(favoriteHairMetalBands, e => Console.WriteLine("Array.ForEach: " + e));
+
+//IF ELSE STATEMENTS
+if (true)
+{
+    Console.WriteLine("This code will ALWAYS run");
+}
+
+var aquariumStoreInvetory = "clownfish";
+
+if ((aquariumStoreInvetory == "pufferFish") || (aquariumStoreInvetory == "clownfish"))
+{
+    Console.WriteLine("I will buy the pufferfish or the clownfish <3");
+}
+else
+{
+    Console.WriteLine("I will not buy anything!");
+}
+
+//<>
+var fishTankPrice = 1001;
+if (fishTankPrice <= 1000)
+{
+    Console.WriteLine("Buy tank");
+}
+else
+{
+    Console.WriteLine("Don't buy");
+}
+
+//method to use an if-statement to check what kind of type the variable is
+var aquariumFish = "pufferfish";
+if (aquariumFish is string) //this means that if the statement is a string, it is going to execute the code. if it's not a string, nothing happends and you'll know it's not a string
+{
+    Console.WriteLine("Aquarium fish is a string");
+}
