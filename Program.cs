@@ -147,3 +147,20 @@ if (aquariumFish is string) //this means that if the statement is a string, it i
 {
     Console.WriteLine("Aquarium fish is a string");
 }
+
+//ENUM 
+
+Console.WriteLine((int)Warning.CodeYellow);
+
+var status = Warning.CodeYellow;
+
+if (status == Warning.CodeYellow)
+{
+    Console.WriteLine("CODE YELLOW");
+}
+enum Warning
+{
+    CodeRed,
+    CodeBlue,
+    CodeYellow
+}
