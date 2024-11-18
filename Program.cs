@@ -149,6 +149,16 @@ if (aquariumFish is string) //this means that if the statement is a string, it i
 }
 
 //ENUM 
+//An enumeration type or enum type is a simple value type, like ints, string, double. They are constants, meaning that they cannot be changed. 
+//example if(status == "code-red") vs if(status == Warning.CodeRed). Even though a string is immutable, meaaning it cant be changed, it still technically can be changed as we can reassign the value. That can't be done with enums, when you define it it is constant and it cannot be reassigned later in the project like a string can. 
+//microsoft assigns an incrementing aka rising int value to lists of enums, so the first enum defined is 0, the second is 1 and so forth;
+//example 
+//enum Warning
+//{
+//    CodeRed, == 0
+//    CodeBlue, == 1
+//    CodeYellow == 2
+//}
 
 Console.WriteLine((int)Warning.CodeYellow);
 
